@@ -1,0 +1,8 @@
+/.idea
+/composer.lock
+/vendor/
+/local/
+!/local/.gitkeep
+!/local/cache/.gitkeep
+/doc/contents/snapshot/*
+!/doc/contents/snapshot/.gitkeep
