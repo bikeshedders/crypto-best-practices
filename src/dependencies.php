@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+use League\CommonMark\Environment as CommonMarkEnvironment;
+use League\CommonMark\Ext\Table\TableExtension;
 use League\CommonMark\CommonMarkConverter;
 use ParagonIE\CSPBuilder\CSPBuilder;
 use Slim\{
@@ -20,7 +22,9 @@ return function (App $app) {
     };
 
     $container['markdown'] = function (Container $c): CommonMarkConverter {
-        return new CommonMarkConverter();
+        $environment = CommonMarkEnvironment::createCommonMarkEnvironment();
+        $environment->addExtension(new TableExtension());
+        return new CommonMarkConverter([], $environment);
     };
 
     $container['purifier'] = function (Container $c): HTMLPurifier {

@@ -15,6 +15,7 @@
     "php": "^7.2",
     "ezyang/htmlpurifier": "^4",
     "league/commonmark": "^1",
+    "league/commonmark-ext-table": "^2.0",
     "mikehaertl/phpwkhtmltopdf": "^2",
     "paragonie/csp-builder": "^2",
     "paragonie/hidden-string": "^1",
