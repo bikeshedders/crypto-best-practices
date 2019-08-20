@@ -57,7 +57,11 @@ class CatchAll
     {
         /** @var \ParagonIE\HiddenString\HiddenString $cacheKey */
         $cacheKey = $this->container['settings']['cache-key'];
-        $mtime = filemtime(CRYPTO_ROOT . '/doc/' . $template);
+        if (is_file(CRYPTO_ROOT . '/doc/' . $template)) {
+            $mtime = filemtime(CRYPTO_ROOT . '/doc/' . $template);
+        } else {
+            $mtime = 0;
+        }
         $cached = sodium_crypto_shorthash(
             pack('P', $mtime) . $template,
             $cacheKey->getString()
