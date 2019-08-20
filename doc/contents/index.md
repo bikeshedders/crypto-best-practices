@@ -39,3 +39,5 @@ verification, accountability, and transparency).
 | Person's Name      | Affiliation                                            |
 |--------------------|--------------------------------------------------------|
 | Arciszewski, Scott | [Paragon Initiative Enterprises](https://paragonie.com)|
+
+If you'd like to contribute, please [visit our GitHub repository](https://github.com/bikeshedders/crypto-best-practices).
